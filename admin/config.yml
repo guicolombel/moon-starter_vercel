@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to main)
+  identity_url: 'https://hungry-meitner-bd29b6.netlify.app/.netlify/identity'
+  gateway_url: 'https://hungry-meitner-bd29b6.netlify.app/.netlify/git'
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
