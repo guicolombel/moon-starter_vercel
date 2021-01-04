@@ -1,0 +1,59 @@
+{
+  "name": "moon-starter",
+  "version": "1.0.0",
+  "description": "🌑 starter pack for creative website projects",
+  "scripts": {
+    "clean": "rimraf _site",
+    "sass": "sass --style=compressed _includes/assets/scss/main.scss _includes/assets/css/main.css",
+    "serve:sass": "node-sass _includes/assets/scss/main.scss -wo _includes/assets/css",
+    "serve:webpack": "webpack --mode development --watch",
+    "serve:eleventy": "npx @11ty/eleventy --watch --serve",
+    "start": "npm-run-all clean sass --parallel serve:*",
+    "build:webpack": "webpack --mode production",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build": "run-s clean sass build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guicolombel/moon-starter"
+  },
+  "author": {
+    "name": "Guillaume Colombel",
+    "email": "guillaume.colombel@gmail.com",
+    "url": "https://www.guillaumecolombel.fr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guicolombel/moon-starter/issues"
+  },
+  "homepage": "https://github.com/guicolombel/moon-starter",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "luxon": "^1.22.2",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.7",
+    "node-sass": "^5.0.0",
+    "sass": "^1.29.0",
+    "@11ty/eleventy-navigation": "^0.1.5",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.2",
+    "clean-css": "^4.2.1",
+    "compression-webpack-plugin": "^6.1.1",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "rimraf": "^3.0.2",
+    "uglify-es": "^3.3.9",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^0.5.0",
+    "@barba/core": "^2.9.7",
+    "gsap": "^3.5.1",
+    "locomotive-scroll": "^4.0.4"
+  }
+}

@@ -1,0 +1,33 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://identity.netlify.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or renderData.title or metadata.title }} — Project Name</title>
+  <meta name="description" content="{{ description }}">
+  <!-- Favicon -->
+  <link rel="icon" href="/static/img/favicon.svg">
+  <!-- Open Graph data / Facebook Card data -->
+  <meta property="og:title" content="Project Name" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://projecturl.com" />
+  <meta property="og:image" content="/static/img/opengraph.jpg" />
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Project Name" />
+  <meta property="og:description" content="{{ description }}" />
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@guicolombel" />
+  <meta name="theme-color" content="#000" />
+  <meta name="msapplication-navbutton-color" content="#000" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <!-- CSS -->
+  {% set css %}
+    {% include "assets/css/main.css" %}
+  {% endset %}
+  <style>{{ css | cssmin | safe }}</style>
+  <!-- Fonts -->
+  {# <link as="font" crossorigin="anonymous" href="/static/fonts/Thermal-Regular.otf" rel="preload"> #}
+  <!-- JS -->
+  <link rel="preload" href="/_includes/assets/js/main.js" as="script">
+</head>

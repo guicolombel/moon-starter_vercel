@@ -1,0 +1,93 @@
+body{
+  background: $bg;
+  font-family: $primaryFont;
+  overflow: hidden;
+  @include tablet-down(){
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+/* Title */
+h1{}
+h2{}
+
+/* Splitting */
+.split{
+  &.is-inview{
+    & > div > div{
+      transform: translate3d(0,0,0);
+      transition: transform 1s cubic-bezier(.4,0,0,1);
+      will-change: transform;
+    }
+  }
+  & > div{
+    overflow: hidden;
+
+    & > div{
+      will-change: transform;
+      transform: translate3d(0,100%,0);
+    }
+  }
+  & > div:nth-child(2) > div{ transition-delay: .2s; }
+  & > div:nth-child(3) > div{ transition-delay: .4s; }
+  & > div:nth-child(4) > div{ transition-delay: .5s; }
+  & > div:nth-child(5) > div{ transition-delay: .6s; }
+  & > div:nth-child(6) > div{ transition-delay: .7s; }
+  & > div:nth-child(7) > div{ transition-delay: .8s; }
+  & > div:nth-child(8) > div{ transition-delay: .9s; }
+  & > div:nth-child(9) > div{ transition-delay: 1s; }
+}
+
+/* Utilities */
+.o-hidden{overflow: hidden;}
+.h-screen{min-height: 100vh; min-height: calc(var(--vh,1vh) * 100);}
+.flex-center{display: flex; justify-content: center; align-items: center;}
+
+/* Lazy load */
+picture{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Link effect */
+.link{
+  text-decoration: none;
+  position: relative;
+  height: max-content;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    border-bottom: solid 1px #000;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.65,0.05,0.36,1);
+  }
+
+  &:hover {
+    &::after {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes underline {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* Font antialiased */
+html, body{
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}

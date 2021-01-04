@@ -1,0 +1,31 @@
+h1{
+  @include font-vw(100px);
+  line-height: 1;
+  font-weight: 100;
+}
+
+.intro{
+  .lazy{
+    position: absolute;
+    z-index: 10;
+  }
+}
+
+.desc{
+  p{
+    @include font-vw(16px);
+    width: 40%;
+  }
+}
+
+.grid-photos{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  padding: 10vh 0;
+}
+
+.credits{
+  padding: 20vh 0;
+}

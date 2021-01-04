@@ -1,0 +1,10 @@
+@import 'partials/vars',
+        'partials/mixins',
+        'partials/reset',
+        'partials/fonts',
+        'partials/structure';
+
+@import 'modules/header',
+        'modules/test';
+
+@import 'libs/locomotive';

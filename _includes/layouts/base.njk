@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+	{% include "components/head.njk" %}
+
+	<body data-barba="wrapper">
+		{% include "components/nav.njk" %}
+		{{ layoutContent | safe }}
+		{% include "components/footer.njk" %}
+	</body>
+</html>
