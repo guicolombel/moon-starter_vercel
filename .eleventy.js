@@ -97,6 +97,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("static/fonts");
   eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("api");
   //eleventyConfig.addPassthroughCopy("manifest.json");
 
   /* Markdown Plugins */
