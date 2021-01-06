@@ -1,9 +1,8 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to main)
-  repo: guicolombel/moon-starter_vercel
-  base_url: moon-starter-vercel.vercel.app
-  auth_endpoint: api/auth
+  identity_url: 'https://hungry-meitner-bd29b6.netlify.app/.netlify/identity'
+  gateway_url: 'https://hungry-meitner-bd29b6.netlify.app/.netlify/git'
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
